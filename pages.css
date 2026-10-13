@@ -1,0 +1,396 @@
+
+/* =========================
+   INFORMASI PAGES
+========================= */
+
+.page-wrapper {
+    min-height: calc(100vh - 70px);
+    background: #f5f5f5;
+}
+
+.page-hero {
+    background: #ebe7de;
+    padding: 42px 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-hero-inner {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.page-hero h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.breadcrumb {
+    color: #777;
+    font-size: 13px;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 25px;
+}
+
+.about-grid,
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.content-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.04);
+}
+
+.content-card h2 {
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.content-card h3 {
+    font-size: 18px;
+    margin: 20px 0 8px;
+}
+
+.content-card p,
+.content-card li {
+    line-height: 1.7;
+    color: #555;
+}
+
+.content-card ul {
+    padding-left: 20px;
+}
+
+.about-image {
+    width: 100%;
+    height: 360px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #ebe7de;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.feature-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.feature-box h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.feature-box p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.5;
+}
+
+.quote-box {
+    margin-top: 20px;
+    background: #ebe7de;
+    border-radius: 12px;
+    padding: 22px;
+    color: #444;
+    font-style: italic;
+}
+
+/* CONTACT */
+
+.contact-info {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 17px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.contact-item .icon {
+    font-size: 22px;
+    width: 30px;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-item span {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 15px 0 7px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #444;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* FAQ */
+
+.faq-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+}
+
+.faq-list {
+    display: grid;
+    gap: 10px;
+}
+
+.faq-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    padding: 17px 18px;
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    float: right;
+    font-size: 20px;
+}
+
+.faq-item[open] summary::after {
+    content: '−';
+}
+
+.faq-answer {
+    padding: 0 18px 18px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.faq-side {
+    background: #ebe7de;
+    border-radius: 14px;
+    padding: 28px;
+    text-align: center;
+    height: fit-content;
+}
+
+.faq-side .big-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.btn-dark {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 18px;
+    border-radius: 8px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* TERMS & PRIVACY */
+
+.policy-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.policy-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 12px;
+}
+
+.policy-section h2 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.policy-section p,
+.policy-section li {
+    color: #555;
+    line-height: 1.7;
+}
+
+.policy-section ul {
+    padding-left: 20px;
+}
+
+/* FOOTER */
+
+.site-footer {
+    background: #222;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 25px 20px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.footer-col h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.footer-col p,
+.footer-col a {
+    color: #bbb;
+    font-size: 13px;
+    line-height: 1.8;
+    text-decoration: none;
+    display: block;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    text-align: center;
+    padding: 14px 20px;
+    color: #999;
+    font-size: 12px;
+}
+
+@media (max-width: 800px) {
+    .about-grid,
+    .contact-grid,
+    .faq-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .page-hero h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .page-container {
+        padding: 30px 15px;
+    }
+
+    .page-hero {
+        padding: 30px 15px;
+    }
+}

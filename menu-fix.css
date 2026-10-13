@@ -1,0 +1,8 @@
+/* Pengaman: memastikan tulisan menu hamburger selalu terbaca.
+   Dimuat PALING AKHIR setelah home.css (tidak dipakai di index.php). */
+.navbar .nav-menu a:not(.logout-link) {
+    color: #111111 !important;
+}
+.navbar .nav-menu a:not(.logout-link):hover {
+    color: #000000 !important;
+}

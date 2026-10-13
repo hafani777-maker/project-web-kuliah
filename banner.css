@@ -1,0 +1,230 @@
+/* banner.css
+   Banner promo (carousel) + strip info di halaman utama.
+   Dimuat setelah style.css (lihat <head> di index.php). */
+
+/* ---------- Wadah ---------- */
+
+.promo-hero {
+    position: relative;
+    width: min(1450px, calc(100% - 32px));
+    margin: 28px auto 0;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.promo-slides {
+    position: relative;
+    min-height: 340px;
+}
+
+/* ---------- Slide ---------- */
+
+.promo-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    padding: 48px 72px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .6s ease, visibility .6s ease;
+    overflow: hidden;
+}
+
+.promo-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.theme-ungu   { background: linear-gradient(120deg, #111 0%, #2a1650 55%, #5b2bb5 100%); }
+.theme-hijau  { background: linear-gradient(120deg, #0b1f1a 0%, #0f4a3b 55%, #17a67f 100%); }
+.theme-oranye { background: linear-gradient(120deg, #1a0f08 0%, #6b2a08 55%, #ff7a1a 100%); }
+
+/* Hiasan lingkaran */
+
+.promo-slide::before,
+.promo-slide::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
+    pointer-events: none;
+}
+
+.promo-slide::before {
+    width: 420px; height: 420px;
+    right: -90px; top: -120px;
+}
+
+.promo-slide::after {
+    width: 260px; height: 260px;
+    right: 180px; bottom: -130px;
+    background: rgba(255, 255, 255, .06);
+}
+
+/* ---------- Isi ---------- */
+
+.promo-content {
+    position: relative;
+    z-index: 1;
+    max-width: 560px;
+}
+
+.promo-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .16);
+    border: 1px solid rgba(255, 255, 255, .3);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+.promo-content h2 {
+    margin: 16px 0 10px;
+    font-size: clamp(28px, 4.4vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+}
+
+.promo-content p {
+    margin: 0 0 24px;
+    font-size: clamp(15px, 1.6vw, 18px);
+    line-height: 1.5;
+    color: rgba(255, 255, 255, .85);
+}
+
+.promo-cta {
+    display: inline-block;
+    padding: 13px 26px;
+    border-radius: 12px;
+    background: #fff;
+    color: #111;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.promo-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .3);
+}
+
+.promo-cta:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+/* ---------- Panah & titik ---------- */
+
+.promo-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 44px; height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .18);
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: background .2s ease;
+}
+
+.promo-nav:hover { background: rgba(255, 255, 255, .32); }
+.promo-nav:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.promo-nav.prev { left: 16px; }
+.promo-nav.next { right: 16px; }
+
+.promo-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    gap: 8px;
+}
+
+.promo-dot {
+    width: 10px; height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .45);
+    cursor: pointer;
+    transition: width .25s ease, background .25s ease;
+}
+
+.promo-dot.is-active {
+    width: 28px;
+    background: #fff;
+}
+
+.promo-dot:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* ---------- Strip info ---------- */
+
+.promo-strip {
+    width: min(1450px, calc(100% - 32px));
+    margin: 16px auto 8px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.promo-strip-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c1f1d;
+}
+
+.promo-strip-icon {
+    flex-shrink: 0;
+    width: 38px; height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #f4f5f3;
+    font-size: 18px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+
+    .promo-slides { min-height: 380px; }
+
+    .promo-slide { padding: 36px 28px 56px; }
+
+    .promo-slide::before { width: 300px; height: 300px; right: -120px; top: -100px; }
+    .promo-slide::after  { display: none; }
+
+    .promo-nav { display: none; }
+
+    .promo-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 480px) {
+
+    .promo-hero { border-radius: 16px; }
+
+    .promo-strip { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .promo-slide, .promo-cta, .promo-dot { transition: none; }
+}

@@ -1,0 +1,13 @@
+Taruh logo pembayaran di folder ini dengan nama PERSIS seperti berikut
+(huruf kecil semua). Format boleh .png / .svg / .webp / .jpg
+
+  mandiri.png
+  bca.png
+  bni.png
+  bri.png
+  gopay.png
+  ovo.png
+  shopeepay.png
+
+Saran: PNG transparan, lebar sekitar 200-300 px, tinggi sekitar 60-100 px
+(ditampilkan maksimal 90x32 px). Kalau file tidak ada, dipakai logo bawaan.

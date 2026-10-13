@@ -1,0 +1,14 @@
+/* Logo "JOYZONE" - disamakan dengan halaman index.php
+   Muat file ini PALING AKHIR di <head> setiap halaman. */
+.nav-logo a,
+.navbar .logo,
+.header .logo {
+    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    color: #111111 !important;
+    text-decoration: none !important;
+    line-height: 1 !important;
+}
